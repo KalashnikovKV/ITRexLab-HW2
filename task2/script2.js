@@ -5,12 +5,12 @@ function generateVolumes(amountPages, amountToms){
     
     for (let i = amountToms; i > 0; i--) {
         if(i === amountToms){
-            let q = Math.floor(arrayLenght/amountToms)
+            const q = Math.floor(arrayLenght/amountToms)
             arrayLenght-= q
             amountToms--
             chapter.push(q)
         }else{
-            let q = Math.floor(arrayLenght/amountToms) + amountPages[arrayLenght-1]
+            const q = Math.floor(arrayLenght/amountToms) + amountPages[arrayLenght-1]
             arrayLenght-= q
             amountToms--
             chapter.push(q)
@@ -19,12 +19,12 @@ function generateVolumes(amountPages, amountToms){
     
     if((amountPages.length/amountToms) % 2 !== 0){
         for (let j = 0; j < chapter.length; j++) {
-            let e = amountPages.splice(0,chapter[j]).reduce((sum , num) => sum + num)
+            const e = amountPages.splice(0,chapter[j]).reduce((sum , num) => sum + num)
             pagesInEachChapter.push(e)
         }
     }else{
         for (let j = 0; j < chapter.length; j++) {
-            let e = amountPages.splice(1,chapter[j]).reduce((sum , num) => sum + num)
+            const e = amountPages.splice(1,chapter[j]).reduce((sum , num) => sum + num)
             pagesInEachChapter.push(e)
         }
     }
