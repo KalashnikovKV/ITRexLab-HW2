@@ -25,27 +25,19 @@ function checkedNumber (num) {
     }
 }
 */
-console.time('start')
+bulbs(20, [2,3,8]) 
 
-let amountBulbs = 172  //99
-let arrayP = [19, 2, 7, 13, 40, 23, 16, 1, 45, 9]
-const bulbsArray = new Array(amountBulbs);
-bulbsArray.fill(1);
-bulbs(amountBulbs, arrayP); 
-
-
-function bulbs() {
+function bulbs(amountBulbs, arrayP) {
+  const bulbsArray = new Array(amountBulbs);
+  bulbsArray.fill(1);
   arrayP.forEach(element => inversion(element));
   const result = bulbsArray.filter(element => element % 2 == 0).length
   console.log(result);
-}
-
-function inversion (element){
-  for (let i = 1; i < bulbsArray.length+1; i++) {
-    if (i % element == 0) {
-      bulbsArray[i-1] += 1;
+  function inversion (element){
+    for (let i = 1; i < bulbsArray.length+1; i++) {
+      if (i % element == 0) {
+        bulbsArray[i-1] += 1;
+      }
     }
   }
 }
-
-console.timeEnd('start')
