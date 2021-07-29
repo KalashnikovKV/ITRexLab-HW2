@@ -1,7 +1,7 @@
 function generateVolumes(amountPages, amountToms){
     let arrayLenght = amountPages.length
-    let chapter = []
-    let pagesInEachChapter = []
+    const chapter = []
+    const pagesInEachChapter = []
     
     for (let i = amountToms; i > 0; i--) {
         if(i === amountToms){

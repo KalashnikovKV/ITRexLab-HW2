@@ -2,7 +2,7 @@
 findKayakAmount([50, 120, 74, 60, 100, 82], 135)
 
 function findKayakAmount(arrayPeopleWeights, capacityKayak){
-  let answer = []
+  const answer = []
   arrayPeopleWeights.sort((a, b) => a - b)
   for (let i = 0; i < arrayPeopleWeights.length; i++) {
     if (((arrayPeopleWeights[i])+(arrayPeopleWeights[i+1])) >= capacityKayak) {
