@@ -12,7 +12,7 @@ function genMagicSquare(n) {
 }
 
 function findMagicSquareThree(n){
-    let answer = Array.from(Array(n+1), () => Array(n+1).fill(0))
+    const answer = Array.from(Array(n+1), () => Array(n+1).fill(0))
     let x = Math.floor(n/2)+1
     let y = 1;
     
